@@ -77,7 +77,7 @@
          </div>
          <div class="art-left-w3ls">
             <h1 class="header-w3ls">
-               GettBus Register Form
+               Local Shop Register Form
             </h1>
             <br><br>
             <h4 style="color: black; text-align: center;">* <span>Register now to get intouch with our services!!!</span></h4>

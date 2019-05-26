@@ -420,7 +420,7 @@ p{
   <div class="container-fluid" style="padding-top: 10px;">
     <div class="row footer-distributed">
       <div class="col-sm footer-left">
-      	<h3>gett<span>Bus</span></h3>
+      	<h3>Local<span>Shop</span></h3>
 				<p class="text-secondary">The Dagel's Team &copy; 2015</p>
       </div>
       <div class="col-sm footer-center" style="border-left: 1px solid black;">
@@ -436,13 +436,14 @@ p{
 
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p class="text-secondary">support@gettBus.com</p>
+					<p class="text-secondary">support@localShop.com</p>
 				</div>
       </div>
       <div class="col-sm footer-right" style="border-left: 1px solid black;">
       	<p class="footer-company-about text-secondary">
 					<span>About the company</span>
-					gettBus adalah sebuah situs yang khusus menjual barang-barang kerajinan lokal dari Kota Bandung itu sendiri
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				</p>
 
 				<div class="footer-icons" style="margin-top: 9%; background-color: none; color:black; font-size: 22px;">

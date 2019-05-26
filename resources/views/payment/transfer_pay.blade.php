@@ -11,19 +11,19 @@
         <div class="agileinfo_main_grid_left_grid">
           <h3>Your Payment Orders</h3>
           <ul>
-            <li>Total Items: <span>{{Cart::count()}} Items</span></li>
+            <li>Total Items: <span class="text-dark">{{Cart::count()}} Items</span></li>
             <li>01</li>
           </ul>
           <ul>
-            <li>Tax: <span>Rp. {{Cart::tax()}}</span></li>
+            <li>Tax: <span class="text-dark">Rp. {{Cart::tax()}}</span></li>
             <li>02</li>
           </ul>
           <ul>
-            <li>Sub Total: <span>Rp. {{Cart::subtotal()}}</span></span></li>
+            <li>Sub Total: <span class="text-dark">Rp. {{Cart::subtotal()}}</span></span></li>
             <li>03</li>
           </ul>
           <ul>
-            <li>Grand Total: <span>Rp. {{Cart::subtotal()}}</span></span></li>
+            <li>Grand Total: <span class="text-dark">Rp. {{Cart::total()}}</span></span></li>
             <li>04</li>
           </ul>
         </div>
@@ -42,7 +42,8 @@
             </ul>
             <div class="resp-tabs-container">
               <div class="agileits_w3layouts_tab1">
-                <form action="#" method="post" class="creditly-card-form agileinfo_form">
+                <form action="{{route('bankOrder')}}" method="post" class="creditly-card-form agileinfo_form">
+                  {{csrf_field()}}
                   <section class="creditly-wrapper wthree, w3_agileits_wrapper">
                     <div class="credit-card-wrapper">
                       <div class="first-row form-group">
@@ -52,26 +53,22 @@
                         </div>
                         <div class="controls">
                           <label class="control-label">Address</label>
-                          <input class="billing-address-name form-control" type="text" name="name" placeholder="Address here....">
+                          <input class="billing-address-name form-control" type="text" name="address" placeholder="Address here....">
                         </div>
                         <div class="controls">
                           <label class="control-label">City</label>
-                          <input class="billing-address-name form-control" type="text" name="name" placeholder="City Name">
+                          <input class="billing-address-name form-control" type="text" name="city" placeholder="City Name">
                         </div>
                         <div class="controls">
                           <label class="control-label">Phone Number</label>
-                          <input class="billing-address-name form-control" inputmode="numeric" type="text" name="name" placeholder="Phone Number Here....">
+                          <input class="billing-address-name form-control" inputmode="numeric" type="text" name="phone" placeholder="Phone Number Here....">
                         </div>
                         <div class="controls">
                           <label class="control-label">ZIP Code</label>
-                          <input class="billing-address-name form-control" inputmode="numeric" type="text" name="name" placeholder="ZIP Code Here....">
-                        </div>
-                        <div class="controls">
-                          <label class="control-label">Date Of Birth</label>
-                          <input class="expiration-month-and-year form-control" type="text" name="expiration-month-and-year" placeholder="MM / YY">
+                          <input class="billing-address-name form-control" inputmode="numeric" type="text" name="zip" placeholder="ZIP Code Here....">
                         </div>
                       </div>
-                      <button class="submit"><span>Make a payment <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></button>
+                      <button type="submit" class="btn btn-info btn-block"><span style="color: black; font-size: 19px;">Make a payment <i class="fa fa-long-arrow-right"></i></span></button>
                     </div>
                   </section>
                 </form>

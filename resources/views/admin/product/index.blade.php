@@ -54,7 +54,7 @@
     </div>
 
     <div class="text-center">
-      {!!$products->links();}
+      {!!$products->links()!!}
     </div>
 
     </div>

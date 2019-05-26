@@ -4,99 +4,221 @@
 
 <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
 
-<div class="main">  
-    <h1>Transfer Payment Method</h1>
-    <div class="w3_agile_main_grids">
-      <div class="w3layouts_main_grid_left">
-        <div class="agileinfo_main_grid_left_grid">
-          <h3>Your Payment Orders</h3>
-          <ul>
-            <li>Total Items: <span>{{Cart::count()}} Items</span></li>
-            <li>01</li>
-          </ul>
-          <ul>
-            <li>Tax: <span>Rp. {{Cart::tax()}}</span></li>
-            <li>02</li>
-          </ul>
-          <ul>
-            <li>Sub Total: <span>Rp. {{Cart::subtotal()}}</span></span></li>
-            <li>03</li>
-          </ul>
-          <ul>  
-          </ul>
-        </div>
-        <div class="agile_amount">
-          <h3>Grand Total</h3>
-          <h4>Rp. {{Cart::total()}}</h4>
-          <p>Price allready includes all taxes</p>
-        </div>
-      </div>
-      <div class="agileits_main_grid_right">
-        <div class="wthree_payment_grid">
-          <h2>Credit Card Payment</h2>
-          <div id="horizontalTab">
-            <ul class="resp-tabs-list">
-              <li><img src="../images/visa.jpg" alt=" " /></li>
-              <li><img src="../images/paypal.jpg" alt=" " /></li>
-            </ul>
-            <div class="resp-tabs-container">
-              <div class="agileits_w3layouts_tab1">
-                <form action="#" method="post" class="creditly-card-form agileinfo_form">
-                  <section class="creditly-wrapper wthree, w3_agileits_wrapper">
-                    <div class="credit-card-wrapper">
-                      <div class="first-row form-group">
-                        <div class="controls">
-                          <label class="control-label">Name on Card</label>
-                          <input class="billing-address-name form-control" type="text" name="name" placeholder="John Smith">
-                        </div>
-                        <div class="w3_agileits_card_number_grids">
-                          <div class="w3_agileits_card_number_grid_left">
-                            <div class="controls">
-                              <label class="control-label">Card Number</label>
-                              <input class="number credit-card-number form-control" type="text" name="number"
-                                      inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number"
-                                      placeholder="&#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149;">
-                            </div>
-                          </div>
-                          <div class="w3_agileits_card_number_grid_right">
-                            <div class="controls">
-                              <label class="control-label">CVV</label>
-                              <input class="security-code form-control"Â·
-                                      inputmode="numeric"
-                                      type="text" name="security-code"
-                                      placeholder="&#149;&#149;&#149;">
-                            </div>
-                          </div>
-                          <div class="clear"> </div>
-                        </div>
-                        <div class="controls">
-                          <label class="control-label">Expiration Date</label>
-                          <input class="expiration-month-and-year form-control" type="text" name="expiration-month-and-year" placeholder="MM / YY">
-                        </div>
-                      </div>
-                      <button class="submit"><span>Make a payment <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></button>
-                    </div>
-                  </section>
-                </form>
-              </div>
-              <div class="agileits_w3layouts_tab2">
-                <h3>Already have a paypal Account <a href="#">Login here</a></h3>
-                <form action="#" method="post">
-                  <input type="email" name="Email" placeholder="Email" required="">
-                  <input type="password" name="Password" placeholder="Password" required="">
-                  <input type="text" inputmode="numeric" name="pin" placeholder="Your Paypal Number" required="">
-                  <input type="text" inputmode="numeric" name="pin" placeholder="Your Paypal PIN" required="">
-                  <br><br>
-                  <input type="submit" value="Login">
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="clear"> </div>
+<div class="container"> 
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item"><a href="#">Payment Method</a></li>
+  <li class="breadcrumb-item active">Credit Card</li>
+</ol>
+<div class="row">
+<div class="col-md-8 ">
+  <div class="panel panel-default">
+    <div class="panel-heading">Credit Card</div>
+      <div class="panel-body" style="background:rgb(217, 237, 247)">
+    <form action="" method="post" id="payment-form">
+     {{csrf_field()}}
+      <div class="form-group">
+      <label for="full_name">Full Name</label>
+      <input type="text" name="full_name" class="form-control" value="" >
+    </div> 
+    <div class="form-group">
+      <label for="address">Adress</label>
+      <textarea type="text" name="address" class="form-control" placeholder="Your Adress.."></textarea>
     </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" name="city" class="form-control" placeholder="Your City..">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" name="phone" class="form-control" placeholder="Your Phone..">
+    </div>
+    <div class="form-group">
+      <label for="zip">Zip Code</label>
+      <input type="text" name="zip" class="form-control" placeholder="Zip Code..">
+    </div>
+    <div class="form-group">
+  <div class="form-row">
+    <label for="card-element">
+      Credit or debit card
+    </label>
+    <div id="card-element">
+      <!-- A Stripe Element will be inserted here. -->
+    </div>
+    <!-- Used to display form errors. -->
+    <div id="card-errors" role="alert"></div>
   </div>
-  <br><br><br>
+  </div>
+    <button type="submit" class="btn btn-success btn-block">Submit</button>
+  </form>
+    </div> <!-- panel body -->
+         <div class="panel-footer">
+          <div class="row">
+            <div class="panel-footer">
+           </div>
+         <div class="col-md-7">
+              <a href="{{route('paymentMethod')}}" class="btn btn-success" style="background-color: #303734; border: none"><< Payment Method</a>
+          </div>
+          <div class="col-md-5"></div>
+         </div>
+          </div> <!-- panel footer -->     
+        </div>
+    </div> <!-- col md 8 -->
+
+         <div class="col-md-4">
+        <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading"><div class="text-center">Info!</div></div>
+           <div class="panel-body">
+              <div class="alert alert-warning" style=" margin-bottom: 0px;">
+               <div class="row">
+                 <div class="col-md-5">
+                     <b>
+                      Items: {{Cart::count()}} <br>
+                      Tax:$ {{Cart::tax()}}<br> 
+                      </b>
+                </div>
+                  <div class="col-md-7">
+                      <b>
+                        Sub Total:$ {{Cart::subtotal()}}<br>
+                        Grand Total:$ {{Cart::total()}}</b>
+                  </div>
+            </div>
+              </div>
+        </div>
+      </div>
+     </div>
+         <div class="panel-group">
+        <div class="panel panel-default">
+           <div class="panel-body">
+              <div class="alert alert-info" style=" margin-bottom: 0px;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s 
+              </div>
+        </div>
+      </div>
+     </div>
+
+     <div class="panel-group">
+        <div class="panel panel-default">
+           <div class="panel-body"> 
+              <div class="alert alert-warning" style=" margin-bottom: 0px;"> 
+              </div><br>
+               <div class="alert alert-info" style=" margin-bottom: 0px;"> 
+              </div><br>
+               <div class="alert alert-warning" style=" margin-bottom: 0px;"> 
+              </div>
+        </div>
+      </div>
+     </div>
+        </div> <!-- col md 4 -->
+    </div>
+</div> <!-- container --><br><br>
+
 @endsection
 
+<style type="text/css">
+  /**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+.StripeElement {
+  background-color: white;
+  height: 40px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+</style>
+
+@section('js')
+
+<script type="text/javascript">
+  // Create a Stripe client.
+var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+
+// Create an instance of Elements.
+var elements = stripe.elements();
+
+// Custom styling can be passed to options when creating an Element.
+// (Note that this demo uses a wider set of styles than the guide below.)
+var style = {
+  base: {
+    color: '#32325d',
+    lineHeight: '18px',
+    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+    fontSmoothing: 'antialiased',
+    fontSize: '16px',
+    '::placeholder': {
+      color: '#aab7c4'
+    }
+  },
+  invalid: {
+    color: '#fa755a',
+    iconColor: '#fa755a'
+  }
+};
+
+// Create an instance of the card Element.
+var card = elements.create('card', {style: style});
+
+// Add an instance of the card Element into the `card-element` <div>.
+card.mount('#card-element');
+
+// Handle real-time validation errors from the card Element.
+card.addEventListener('change', function(event) {
+  var displayError = document.getElementById('card-errors');
+  if (event.error) {
+    displayError.textContent = event.error.message;
+  } else {
+    displayError.textContent = '';
+  }
+});
+
+// Handle form submission.
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  stripe.createToken(card).then(function(result) {
+    if (result.error) {
+      // Inform the user if there was an error.
+      var errorElement = document.getElementById('card-errors');
+      errorElement.textContent = result.error.message;
+    } else {
+      // Send the token to your server.
+      stripeTokenHandler(result.token);
+    }
+  });
+});
+
+function stripeTokenHandler(token) {
+ 
+  // Insert the token ID into the form so it gets submitted to the server
+  var form = document.getElementById('payment-form');
+  var hiddenInput = document.createElement('input');
+  hiddenInput.setAttribute('type', 'hidden');
+  hiddenInput.setAttribute('name', 'stripeToken');
+  hiddenInput.setAttribute('value', token.id);
+  form.appendChild(hiddenInput);
+
+  // Submit the form
+  form.submit();
+}
+</script>
+
+@endsection

@@ -6,9 +6,9 @@
           <div id="orders" class="panel-collapse collapse">
         	<div class="panel-footer"> </div>
           <div class="panel-body">
-              <a href="#" class="list-group-item">All Orders</a>
-              <a href="#" class="list-group-item">Pending Orders</a>
-              <a href="#" class="list-group-item">Delivered</a>
+              <a href="{{route('allOrders')}}" class="list-group-item">All Orders</a>
+              <a href="{{route('pendingOrder')}}" class="list-group-item">Pending Orders</a>
+              <a href="{{route('deliver')}}" class="list-group-item">Delivered</a>
           </div>
           </div>
               <a data-toggle="collapse" href="#product" class="list-group-item">Product</a>
