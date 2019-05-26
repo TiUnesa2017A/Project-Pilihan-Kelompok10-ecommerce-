@@ -16,7 +16,7 @@ Alfin Falah S. (17051204040) <br>
 	<li>Admin Full Control Order (Accept, Rejected, and Pending)</li>
 </ol>
 
-##Demo Tampilan
+## Demo Tampilan
 <ul style="list-style-type:circle;">
 	<li>Home <img src="img_sample/home.png"></li>
 	<li>Product item <img src="img_sample/product.png"></li>
