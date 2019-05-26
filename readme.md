@@ -3,7 +3,7 @@
 
 ## Nama Kelompok
 Fahri Muhammad (17051204029) <br>
-Husni Mubarok  (17051204030) <br>
+Husni Mubarok  (17051204033) <br>
 Alfin Falah S. (17051204040) <br>
 
 ## Fitur
