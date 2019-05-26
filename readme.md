@@ -1,5 +1,5 @@
 ## Judul Project
-<h3 align="center">LocalShop: Dynamic e-commerce website, with admin panel and user panel <br>+ Stripe Api Payments</h3>
+<h2 style="color: red;" align="center">LocalShop: Dynamic e-commerce website, with admin panel and user panel <br>+ Stripe Api Payments</h2>
 
 ## Nama Kelompok
 Fahri Muhammad (17051204029) <br>
