@@ -9,7 +9,8 @@ Alfin Falah S. (17051204040) <br>
 
 ## Fitur
 <ol type="1">
-	<li>Admin and User Panel</li>
+	<li>Admin Panel</li>
+	<li>User Panel</li>
 	<li>Dynamic Product Crud</li>
 	<li>Dynamic Shopping Cart</li>
 	<li>Mail Verification adn Submitting (with mailtrap)</li>
